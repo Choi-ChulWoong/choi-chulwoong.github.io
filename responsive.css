@@ -6,6 +6,7 @@
         z-index: 10002;
     }
     .header{
+        height: 630px;
         background: transparent;
     }
     .header::before{
