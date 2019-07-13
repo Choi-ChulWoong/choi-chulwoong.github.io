@@ -154,6 +154,7 @@ function page_on(e){
 window.onload = function(){
 var anicheck = 0
 
+window.scrollTo(0,1); // adressbar 숨기기
 scroll_animation() // 새로고침시 애니메이션 1회 호출
 window.addEventListener('scroll', scroll_animation )
 
