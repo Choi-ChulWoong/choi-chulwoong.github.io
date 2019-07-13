@@ -7,38 +7,30 @@
 .header_title_2{
   animation: slide-right 0.8s ease-out 0.5s both;
 }
-.myinfo_introduce{
-  opacity: 0;
-}
-.myinfo_introduce2{
-  opacity: 0;
-}
-.skills_container{
-  opacity: 0;
-}
-.skills_readmore{
-  opacity: 0;
-}
-.project_img1,.project_img3{
-  opacity: 0;
-}
-.project_img2{
-  opacity: 0;
-}
-.project_intro1, .project_intro3{
-  opacity: 0;
-}
-.project_intro2{
-  opacity: 0;
-}
-.fa-sms{
-  opacity: 0;
-}
-.fa-github{
-  opacity: 0;
-}
-.fa-instagram{
-  opacity: 0;
+.myinfo_introduce{opacity: 0;}
+.myinfo_introduce2{opacity: 0;}
+.skills_container{opacity: 0;}
+.skills_readmore{opacity: 0;}
+.project_img1,.project_img3{opacity: 0;}
+.project_img2{opacity: 0;}
+.project_intro1, .project_intro3{opacity: 0;}
+.project_intro2{opacity: 0;}
+.fa-sms{opacity: 0;}
+.fa-github{opacity: 0;}
+.fa-instagram{opacity: 0;}
+
+@media (max-width: 449px){
+  .myinfo_introduce{opacity: 1;}
+  .myinfo_introduce2{opacity: 1;}
+  .skills_container{opacity: 1;}
+  .skills_readmore{opacity: 1;}
+  .project_img1,.project_img3{opacity: 1;}
+  .project_img2{opacity: 1;}
+  .project_intro1, .project_intro3{opacity: 1;}
+  .project_intro2{opacity: 1;}
+  .fa-sms{opacity: 1;}
+  .fa-github{opacity: 1;}
+  .fa-instagram{opacity: 1;}
 }
 /* Animation =======================================================*/
 @-webkit-keyframes slide-right {
