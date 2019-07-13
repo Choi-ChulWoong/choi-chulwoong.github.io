@@ -190,50 +190,52 @@ function scroll_animation(){ // 스크롤 이벤트리스너
     }
 
     //스크롤 위치에 따른 div show 및 애니메이션 효과
-    if( anicheck == 0 && ((scrolltop + client_height/2) >= section[0].offsetTop) ){
-        myinfo_introduce[0].style.animation = "slide-right 0.7s ease-out both"
-        myinfo_introduce[0].style.opacity = "1"
-        myinfo_introduce2[0].style.animation = "slide-left 0.7s ease-out both"
-        myinfo_introduce2[0].style.opacity = "1"
-        anicheck++
+    if(window.innerWidth > 450){
+        if( anicheck == 0 && ((scrolltop + client_height/2) >= section[0].offsetTop) ){
+            myinfo_introduce[0].style.animation = "slide-right 0.7s ease-out both"
+            myinfo_introduce[0].style.opacity = "1"
+            myinfo_introduce2[0].style.animation = "slide-left 0.7s ease-out both"
+            myinfo_introduce2[0].style.opacity = "1"
+            anicheck++
+        }
+        if( anicheck == 1 && (scrolltop + client_height/2) >= section[1].offsetTop){
+            skills_container[0].style.animation = "slide-up 0.7s ease-out both"
+            skills_container[0].style.opacity = "1"
+            skills_readmore[0].style.animation = "slide-left 0.7s ease-out 0.4s both"
+            skills_readmore[0].style.opacity = "1"
+            anicheck++
+        }
+        if( anicheck == 2 && (scrolltop + client_height/2) >= (section[2].offsetTop + project_container[0].offsetTop) ){
+            project_img1[0].style.animation = "slide-right 0.7s ease-out both"
+            project_intro1[0].style.animation = "slide-left 0.7s ease-out both"
+            project_img1[0].style.opacity = "1"
+            project_intro1[0].style.opacity = "1"
+            anicheck++
+        }
+        if( anicheck == 3 && (scrolltop + client_height/2) >= (section[2].offsetTop + project_container[1].offsetTop) ){
+            project_img2[0].style.animation = "slide-left 0.7s ease-out both"
+            project_intro2[0].style.animation = "slide-right 0.7s ease-out both"
+            project_img2[0].style.opacity = "1"
+            project_intro2[0].style.opacity = "1"
+            anicheck++
+        }
+        if( anicheck == 4 && (scrolltop + client_height/2) >= (section[2].offsetTop + project_container[2].offsetTop) ){
+            project_img3[0].style.animation = "slide-right 0.7s ease-out both"
+            project_img3[0].style.opacity = "1"
+            project_intro3[0].style.animation = "slide-left 0.7s ease-out both"
+            project_intro3[0].style.opacity = "1"
+            anicheck++
+        }
+        if( anicheck == 5 && (scrolltop + client_height) >= (footer[0].offsetTop + footer[0].offsetHeight/1.4) ){
+            fa_sms[0].style.opacity = "1"
+            fa_github[0].style.opacity = "1"
+            fa_instagram[0].style.opacity = "1"
+            fa_sms[0].style.animation = "fadeIn 0.7s ease-out both"
+            fa_github[0].style.animation = "fadeIn 0.7s ease-out 0.25s both"
+            fa_instagram[0].style.animation = "fadeIn 0.7s ease-out 0.5s both"
+            anicheck++
+        }
     }
-    if( anicheck == 1 && (scrolltop + client_height/2) >= section[1].offsetTop){
-        skills_container[0].style.animation = "slide-up 0.7s ease-out both"
-        skills_container[0].style.opacity = "1"
-        skills_readmore[0].style.animation = "slide-left 0.7s ease-out 0.4s both"
-        skills_readmore[0].style.opacity = "1"
-        anicheck++
+        
     }
-    if( anicheck == 2 && (scrolltop + client_height/2) >= (section[2].offsetTop + project_container[0].offsetTop) ){
-        project_img1[0].style.animation = "slide-right 0.7s ease-out both"
-        project_intro1[0].style.animation = "slide-left 0.7s ease-out both"
-        project_img1[0].style.opacity = "1"
-        project_intro1[0].style.opacity = "1"
-        anicheck++
-    }
-    if( anicheck == 3 && (scrolltop + client_height/2) >= (section[2].offsetTop + project_container[1].offsetTop) ){
-        project_img2[0].style.animation = "slide-left 0.7s ease-out both"
-        project_intro2[0].style.animation = "slide-right 0.7s ease-out both"
-        project_img2[0].style.opacity = "1"
-        project_intro2[0].style.opacity = "1"
-        anicheck++
-    }
-    if( anicheck == 4 && (scrolltop + client_height/2) >= (section[2].offsetTop + project_container[2].offsetTop) ){
-        project_img3[0].style.animation = "slide-right 0.7s ease-out both"
-        project_img3[0].style.opacity = "1"
-        project_intro3[0].style.animation = "slide-left 0.7s ease-out both"
-        project_intro3[0].style.opacity = "1"
-        anicheck++
-    }
-    if( anicheck == 5 && (scrolltop + client_height) >= (footer[0].offsetTop + footer[0].offsetHeight/1.4) ){
-        fa_sms[0].style.opacity = "1"
-        fa_github[0].style.opacity = "1"
-        fa_instagram[0].style.opacity = "1"
-        fa_sms[0].style.animation = "fadeIn 0.7s ease-out both"
-        fa_github[0].style.animation = "fadeIn 0.7s ease-out 0.25s both"
-        fa_instagram[0].style.animation = "fadeIn 0.7s ease-out 0.5s both"
-        anicheck++
-    }
-
-}
 }
