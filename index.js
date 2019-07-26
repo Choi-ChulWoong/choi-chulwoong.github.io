@@ -12,6 +12,7 @@ var section = document.getElementsByClassName('section')
 var myinfo = document.getElementsByClassName('article_myinfo')
 var myinfo_introduce = document.getElementsByClassName('myinfo_introduce')
 var myinfo_introduce2 = document.getElementsByClassName('myinfo_introduce2')
+var myinfo_introduce2_img = document.getElementsByClassName('myinfo_introduce2_img')
 var skills_container = document.getElementsByClassName('skills_container')
 var skills_box = document.getElementsByClassName('skills_skillbox')
 var skills_title = document.getElementsByClassName('skills_title')
@@ -196,6 +197,7 @@ function scroll_animation(){ // 스크롤 이벤트리스너
             myinfo_introduce[0].style.animation = "slide-right 0.7s ease-out both"
             myinfo_introduce[0].style.opacity = "1"
             myinfo_introduce2[0].style.animation = "slide-left 0.7s ease-out both"
+            for(i=0;i<myinfo_introduce2_img.length;i++){myinfo_introduce2_img[i].style.opacity="1"}
             myinfo_introduce2[0].style.opacity = "1"
             anicheck++
         }

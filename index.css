@@ -366,7 +366,7 @@ body *{font-family: 'Quicksand', 'Noto Sans KR', sans-serif;}
     transition: all .3s ease-in-out;
 }
 .project_img1{background-image: url('./src/portfolio_img/portfolio1_1.png')}
-.project_img1:hover{background-image: url('./src//portfolio_img//portfolio1_2.png')}
+/* .project_img1:hover{background-image: url('./src//portfolio_img//portfolio1_2.png')} */
 .project_img2{background-image: url('./src/portfolio_img/portfolio1_2.png'); order: 2;}
 .project_img3{background-image: url('./src/portfolio_img/portfolio2.gif')}
 
