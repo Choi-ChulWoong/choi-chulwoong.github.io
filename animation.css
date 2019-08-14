@@ -9,7 +9,7 @@
 }
 .myinfo_introduce{opacity: 0;}
 .myinfo_introduce2{opacity: 0; transition: all 0.7s ease-in-out}
-/* .myinfo_introduce2_img{opacity: 0;} */
+.myinfo_introduce2_img{opacity: 0;}
 .skills_container{opacity: 0;}
 .skills_readmore{opacity: 0;}
 .project_img1,.project_img3{opacity: 0;}
@@ -23,6 +23,7 @@
 @media (max-width: 449px){
   .myinfo_introduce{opacity: 1;}
   .myinfo_introduce2{opacity: 1;}
+  .myinfo_introduce2_img{opacity: 1;}
   .skills_container{opacity: 1;}
   .skills_readmore{opacity: 1;}
   .project_img1,.project_img3{opacity: 1;}
