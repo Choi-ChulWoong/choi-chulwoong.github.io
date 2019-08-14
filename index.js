@@ -222,14 +222,14 @@ function scroll_animation(){ // 스크롤 이벤트리스너
             project_intro2[0].style.opacity = "1"
             anicheck++
         }
-        if( anicheck == 4 && (scrolltop + client_height/2) >= (section[2].offsetTop + project_container[2].offsetTop) ){
-            project_img3[0].style.animation = "slide-right 0.7s ease-out both"
-            project_img3[0].style.opacity = "1"
-            project_intro3[0].style.animation = "slide-left 0.7s ease-out both"
-            project_intro3[0].style.opacity = "1"
-            anicheck++
-        }
-        if( anicheck == 5 && (scrolltop + client_height) >= (footer[0].offsetTop + footer[0].offsetHeight/1.4) ){
+        // if( anicheck == 4 && (scrolltop + client_height/2) >= (section[2].offsetTop + project_container[2].offsetTop) ){
+        //     project_img3[0].style.animation = "slide-right 0.7s ease-out both"
+        //     project_img3[0].style.opacity = "1"
+        //     project_intro3[0].style.animation = "slide-left 0.7s ease-out both"
+        //     project_intro3[0].style.opacity = "1"
+        //     anicheck++
+        // }
+        if( anicheck == 4 && (scrolltop + client_height) >= (footer[0].offsetTop + footer[0].offsetHeight/1.4) ){
             fa_sms[0].style.opacity = "1"
             fa_github[0].style.opacity = "1"
             fa_instagram[0].style.opacity = "1"
