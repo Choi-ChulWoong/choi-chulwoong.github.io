@@ -178,9 +178,9 @@
         font-size: 1.5em;
     }
     .project_img1{background-image: url('./src/portfolio_img/portfolio1_mobile.png')}
-    .project_img1:hover{background-image: url('./src/portfolio_img/portfolio1_mobile.png')}
-    .project_img2{background-image: url('./src/portfolio_img/portfolio1_mobile.png'); order: 2;}
-    .project_img3{background-image: url('./src/portfolio_img/portfolio2.gif')}
+    /* .project_img1:hover{background-image: url('./src/portfolio_img/portfolio1_mobile.png')} */
+    .project_img2{background-image: url('./src/portfolio_img/portfolio2.gif'); order: 2;}
+    /* .project_img3{background-image: url('./src/portfolio_img/portfolio2.gif')} */
     
     .footer{
         justify-content: flex-start;
