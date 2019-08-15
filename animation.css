@@ -2,10 +2,10 @@
   animation: fadeIn2 1s ease-out both;
 }
 .header_title_1{
-  animation: slide-right 0.8s ease-out both;
+  animation: slide-right 1s ease-out both;
 }
 .header_title_2{
-  animation: slide-right 0.8s ease-out 0.5s both;
+  animation: slide-right 1s ease-out 0.5s both;
 }
 .myinfo_introduce{opacity: 0;}
 .myinfo_introduce2{opacity: 0; transition: all 0.7s ease-in-out}
