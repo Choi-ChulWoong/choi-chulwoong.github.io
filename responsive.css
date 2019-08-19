@@ -147,6 +147,9 @@
         flex-flow: column;
         margin-bottom: 10%;
     }
+    .project_container2{
+        margin-bottom: 12%;
+    }
     .project_intro{
         width: 100%;
     }

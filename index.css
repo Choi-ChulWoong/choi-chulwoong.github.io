@@ -138,10 +138,10 @@ body *{font-family: 'Quicksand', 'Noto Sans KR', sans-serif;}
     text-align: center;
 }
 .article_title{
-    -js-display: flex;
-    display: flex;
-    justify-content: center;
     position: relative;
+    /* -js-display: flex;
+    display: flex;
+    justify-content: center; */
     width: max-content; height: max-content;
     font-size: 2em;
     font-weight: 600;
@@ -149,7 +149,8 @@ body *{font-family: 'Quicksand', 'Noto Sans KR', sans-serif;}
 .article_title::before{
     content: '';
     position: absolute;
-    margin: 0; padding: 0;
+    margin-left: 22.5%; padding-left: 0;
+    left: 0;
     width: 55%; height: 130%;
     border-bottom: 3px solid black;
 }
@@ -452,9 +453,15 @@ body *{font-family: 'Quicksand', 'Noto Sans KR', sans-serif;}
     width: 100%; height: 37%;
     background-color: #161c24;
 }
-.footer_topbutton{
+.footer_topbutton_container{
     position: absolute;
-    top: -25px;
+    -js-display: flex;
+    display: flex;
+    justify-content: center;
+    left:0; top: -25px;
+    width: 100%; height: 50px;
+}
+.footer_topbutton{
     width: 50px; height: 50px;
     text-align: center;
     font-size: 30px;
