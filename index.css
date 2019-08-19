@@ -357,6 +357,9 @@ body *{font-family: 'Quicksand', 'Noto Sans KR', sans-serif;}
     margin-bottom: 5%;
     width: 100%;
 }
+.project_container2{
+    margin-bottom: 6%;
+}
 .project_img{
     margin: 0 2%;
     width: 50%;
