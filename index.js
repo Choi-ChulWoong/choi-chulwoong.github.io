@@ -156,9 +156,15 @@ window.onload = function(){
 var anicheck = 0
 
 window.scrollTo(0,1); // adressbar 숨기기
-scroll_animation() // 새로고침시 애니메이션 1회 호출
+scroll_animation(); // 새로고침시 애니메이션 1회 호출
 window.addEventListener('scroll', scroll_animation )
+ie_fixed();
 
+function ie_fixed(){
+    if(navigator.userAgent.match(/Trident\/7\./)) {
+        header[0].style.backgroundAttachment = "scroll"
+    }
+}
 function scroll_animation(){ // 스크롤 이벤트리스너
     var scrolltop = document.documentElement.scrollTop
     var client_height = document.documentElement.clientHeight
