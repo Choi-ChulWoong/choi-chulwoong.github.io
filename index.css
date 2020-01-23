@@ -446,7 +446,7 @@ body * {
 }
 /* .project_img1:hover{background-image: url('./src//portfolio_img//portfolio1_2.png')} */
 .project_img2 {
-  background-image: url("./src/portfolio_img/portfolio1_1.png");
+  background-image: url("./src/portfolio_img/portfolio2_1.png");
   order: 2;
 }
 .project_img3 {
