@@ -96,35 +96,78 @@ body * {
   background-color: black;
   z-index: 10002;
 }
-/* Header =================================================== */
-.header {
+/* Canvas =================================================== */
+canvas {
+  position: absolute;
   width: 100%;
   height: 100%;
-  background: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FNIs02%2FbtqwHK09v78%2F4kfLNSf8fnmebXffUA6Ie0%2Fimg.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  transition: all 0.3s ease-in-out;
+}
+/* Header =================================================== */
+.header {
+  position: static;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(128deg, #000000, #00235f, #003057, #000000);
+  background-size: 800% 800%;
+}
+
+.header_overlay {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 20%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0));
+}
+.header-layer {
+  position: absolute;
+}
+.header_moon {
+  top: -260px;
+  right: -650px;
+}
+.header_cloud {
+  bottom: 0px;
+  left: -310px;
+}
+.header_cloud2 {
+  bottom: -30px;
+  right: -500px;
+}
+.header_building {
+  bottom: -25px;
+}
+.header_moon img {
+  width: 30%;
+  height: 30%;
+}
+.header_cloud img {
+  width: 80%;
+  height: 80%;
+  opacity: 0.15;
+}
+.header_cloud2 img {
+  width: 60%;
+  height: 60%;
+  opacity: 0.1;
+}
+.header_building img {
+  width: 100%;
+  height: 100%;
 }
 .header_container {
   -js-display: flex;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  padding: 5%;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  height: 75%;
 }
 .header_title {
-  padding-bottom: 7%;
-  font-size: 3.8em;
-  line-height: 1.3em;
+  text-align: center;
+  font-size: 1.8em;
   font-weight: 600;
-  /* text-align: center; */
-  word-break: keep-all;
 }
+
 /* Nav =================================================== */
 .nav {
   position: absolute;

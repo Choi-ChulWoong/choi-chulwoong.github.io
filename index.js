@@ -1,41 +1,45 @@
-var readmore_on = false;
-var skills_show = false;
-var modal_on = false;
-var modal_youtube_on = false;
-var nav_mobile_on = false;
-var modal = document.getElementsByClassName("modal");
-var header = document.getElementsByClassName("header");
-var nav = document.getElementsByClassName("nav");
-var nav_menu = document.getElementsByClassName("nav_menu");
-var nav_container = document.getElementsByClassName("nav_container");
-var section = document.getElementsByClassName("section");
-var myinfo = document.getElementsByClassName("article_myinfo");
-var myinfo_introduce = document.getElementsByClassName("myinfo_introduce");
-var myinfo_introduce2 = document.getElementsByClassName("myinfo_introduce2");
-var myinfo_introduce2_img = document.getElementsByClassName(
+let readmore_on = false;
+let skills_show = false;
+let modal_on = false;
+let modal_youtube_on = false;
+let nav_mobile_on = false;
+const modal = document.getElementsByClassName("modal");
+const header = document.getElementsByClassName("header");
+const moon = document.getElementsByClassName("header_moon");
+const header_title = document.getElementsByClassName("header_title");
+const cloud1 = document.getElementsByClassName("header_cloud");
+const cloud2 = document.getElementsByClassName("header_cloud2");
+const nav = document.getElementsByClassName("nav");
+const nav_menu = document.getElementsByClassName("nav_menu");
+const nav_container = document.getElementsByClassName("nav_container");
+const section = document.getElementsByClassName("section");
+const myinfo = document.getElementsByClassName("article_myinfo");
+const myinfo_introduce = document.getElementsByClassName("myinfo_introduce");
+const myinfo_introduce2 = document.getElementsByClassName("myinfo_introduce2");
+const myinfo_introduce2_img = document.getElementsByClassName(
   "myinfo_introduce2_img"
 );
-var skills_container = document.getElementsByClassName("skills_container");
-var skills_box = document.getElementsByClassName("skills_skillbox");
-var skills_title = document.getElementsByClassName("skills_title");
-var skills_text = document.getElementsByClassName("skills_text");
-var skills_img = document.getElementsByClassName("skills_img");
-var skills_readmore = document.getElementsByClassName("skills_readmore");
-var project_container = document.getElementsByClassName("project_container");
-var project_img1 = document.getElementsByClassName("project_img1");
-var project_intro1 = document.getElementsByClassName("project_intro1");
-var project_img2 = document.getElementsByClassName("project_img2");
-var project_intro2 = document.getElementsByClassName("project_intro2");
-var project_img3 = document.getElementsByClassName("project_img3");
-var project_intro3 = document.getElementsByClassName("project_intro3");
-var footer = document.getElementsByClassName("footer");
-var fa_sms = document.getElementsByClassName("fa-sms");
-var fa_github = document.getElementsByClassName("fa-github");
-var fa_instagram = document.getElementsByClassName("fa-instagram");
+const skills_container = document.getElementsByClassName("skills_container");
+const skills_box = document.getElementsByClassName("skills_skillbox");
+const skills_title = document.getElementsByClassName("skills_title");
+const skills_text = document.getElementsByClassName("skills_text");
+const skills_img = document.getElementsByClassName("skills_img");
+const skills_readmore = document.getElementsByClassName("skills_readmore");
+const project_container = document.getElementsByClassName("project_container");
+const project_img1 = document.getElementsByClassName("project_img1");
+const project_intro1 = document.getElementsByClassName("project_intro1");
+const project_img2 = document.getElementsByClassName("project_img2");
+const project_intro2 = document.getElementsByClassName("project_intro2");
+const project_img3 = document.getElementsByClassName("project_img3");
+const project_intro3 = document.getElementsByClassName("project_intro3");
+const footer = document.getElementsByClassName("footer");
+const fa_sms = document.getElementsByClassName("fa-sms");
+const fa_github = document.getElementsByClassName("fa-github");
+const fa_instagram = document.getElementsByClassName("fa-instagram");
 
 function readmore_hide() {
   // Skills 더보기 텍스트교체 event
-  var readmore = document.getElementsByClassName("skills_readmore");
+  const readmore = document.getElementsByClassName("skills_readmore");
   if (readmore_on == false) {
     readmore[0].innerHTML =
       "스킬 접기 <span class='skills_readmore_plus'>↑</span>";
@@ -80,8 +84,8 @@ function skillsshow(e) {
 
 function nav_scroll(e) {
   // Nav_menu 스크롤 이동
-  var scroll_target = document.getElementsByClassName(e);
-  var scroll_tartget_offset = scroll_target[0].offsetTop;
+  const scroll_target = document.getElementsByClassName(e);
+  const scroll_tartget_offset = scroll_target[0].offsetTop;
   window.scroll({ top: scroll_tartget_offset, left: 0, behavior: "smooth" });
 
   // for mobile
@@ -111,11 +115,11 @@ function nav_mobile() {
 }
 
 /* Youtube Api*/
-var tag = document.createElement("script");
+const tag = document.createElement("script");
 tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
+const firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-var player;
+let player;
 /* Youtube Api end*/
 
 function youtube_on(e) {
@@ -160,12 +164,19 @@ function page_on(e) {
   window.open(e);
 }
 window.onload = function() {
-  var anicheck = 0;
+  let anicheck = 0;
 
   window.scrollTo(0, 1); // adressbar 숨기기
   scroll_animation(); // 새로고침시 애니메이션 1회 호출
   window.addEventListener("scroll", scroll_animation);
+  header[0].addEventListener("mousemove", layerMove);
   ie_fixed();
+
+  function layerMove(event) {
+    cloud1[0].style.left = event.clientX * -0.015 - 330 + "px";
+    cloud2[0].style.right = event.clientX * -0.015 - 620 + "px";
+    moon[0].style.right = event.clientX * 0.015 - 650 + "px";
+  }
 
   function ie_fixed() {
     if (navigator.userAgent.match(/Trident\/7\./)) {
@@ -174,8 +185,16 @@ window.onload = function() {
   }
   function scroll_animation() {
     // 스크롤 이벤트리스너
-    var scrolltop = document.documentElement.scrollTop;
-    var client_height = document.documentElement.clientHeight;
+    const scrolltop = document.documentElement.scrollTop;
+    const client_height = document.documentElement.clientHeight;
+
+    // 달 스크롤
+    if (scrolltop <= 420) {
+      moon[0].style.top = scrolltop * 1.85 - 280 + "px";
+    }
+
+    // 헤더 타이틀 opacity
+    header_title[0].style.opacity = 1 - scrolltop * 0.004;
 
     // 스크롤에 따른 Nav bar화면 고정
     if (scrolltop >= section[0].offsetTop) {

@@ -10,31 +10,7 @@
     height: 630px;
     background: transparent;
   }
-  .header::before {
-    content: " ";
-    position: fixed;
-    display: block;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 630px;
-    top: 0;
-    left: 0;
-    background: url("https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FNIs02%2FbtqwHK09v78%2F4kfLNSf8fnmebXffUA6Ie0%2Fimg.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: -10;
-  }
-  .header_container {
-    justify-content: center;
-  }
-  .header_title {
-    font-size: 7vw;
-  }
-  .header_title_1 span {
-    display: block;
-  }
+
   .article_title_wrap {
     padding: 60px 0;
   }
@@ -277,9 +253,7 @@
   .project_img2 {
     order: 1;
   }
-  .header_title {
-    font-size: 2.5em;
-  }
+
   .skills_container {
     transition: all 0.9s ease-in-out;
   }
@@ -295,9 +269,7 @@
   .project_img {
     height: 330px;
   }
-  .header_title {
-    font-size: 3.2em;
-  }
+
   .skills_container {
     transition: all 0.7s ease-in-out;
   }
@@ -310,9 +282,7 @@
   .project_img {
     height: unset;
   }
-  .header_title {
-    font-size: 3.8em;
-  }
+
   .skills_container {
     transition: all 0.5s ease-out;
   }

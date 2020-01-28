@@ -20,12 +20,22 @@
   </head>
   <body>
     <header class="header">
+      <canvas id="star"></canvas>
+      <div class="header-layer header_overlay"></div>
+      <div class="header-layer header_moon"><img src="./src/moon.png" /></div>
+      <div class="header-layer header_cloud">
+        <img src="./src/cloud2.png" />
+      </div>
+      <div class="header-layer header_cloud2">
+        <img src="./src/cloud2.png" />
+      </div>
+      <div class="header-layer header_building">
+        <img src="./src/building3.png" />
+      </div>
+
       <div class="header_container">
         <div class="header_title">
-          <p class="header_title_1">안녕하세요, <span>Web Developer</span></p>
-          <p class="header_title_2">
-            <span class="highlight">최철웅</span>의 포트폴리오입니다
-          </p>
+          Ian Choi's Portfolio
         </div>
       </div>
     </header>
@@ -196,10 +206,11 @@
             <p class="skills_text">
               ㆍ웹표준 기반 태그<br />
               ㆍ시멘틱에 대한 이해<br />
+              ㆍHTML Canvas 사용<br />
             </p>
           </div>
           <div class="skills_skillbox" onclick="skillsshow('6')" id="skillbox7">
-            <span class="skills_title">CSS3</span>
+            <span class="skills_title">CSS5</span>
             <div
               class="skills_img"
               style="background-image: url('./src/skill_logo/css.png')"
@@ -432,5 +443,6 @@
 
     <script src="flexibility.js"></script>
     <script src="index.js"></script>
+    <script src="canvas_star.js"></script>
   </body>
 </html>
