@@ -180,8 +180,8 @@ window.onload = function() {
       0.015 *
       1}px,0,0)`;
     moon[0].style.transform = `translate3d(${event.clientX *
-      0.015 *
-      -1}px,${event.clientY * 0.015 * -1}px,0)`;
+      0.005 *
+      -1}px,${event.clientY * 0.01 * -1}px,0)`;
   }
 
   function ie_fixed() {
