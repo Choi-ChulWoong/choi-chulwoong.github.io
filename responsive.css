@@ -8,7 +8,9 @@
   }
   .header {
     height: 630px;
-    background: transparent;
+  }
+  .header-layer {
+    display: none;
   }
 
   .article_title_wrap {
