@@ -11,9 +11,9 @@ let scale = 1, // 1픽셀
   width,
   height;
 let stars = []; // 별 배열
-let pointerX, pointerY; // 마우스 위치
-let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.0005 }; // 별 속도
-let touchInput = false; // 터치 여부
+// let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.0005 }; // 별 속도
+// let pointerX, pointerY; // 마우스 위치
+// let touchInput = false; // 터치 여부
 
 // 함수 실행-----------------------
 
@@ -24,10 +24,10 @@ step();
 // 함수 등록-----------------------
 
 window.onresize = resize;
-canvas.onmousemove = onMouseMove;
-canvas.ontouchmove = onTouchMove;
-canvas.ontouchend = onMouseLeave;
-document.onmouseleave = onMouseLeave;
+// canvas.onmousemove = onMouseMove;
+// canvas.ontouchmove = onTouchMove;
+// canvas.ontouchend = onMouseLeave;
+// document.onmouseleave = onMouseLeave;
 
 // 함수---------------------------
 
@@ -76,26 +76,26 @@ function render() {
   });
 }
 
-function movePointer(x, y) {
-  pointerX = x;
-  pointerY = y;
-}
+// function movePointer(x, y) {
+//   pointerX = x;
+//   pointerY = y;
+// }
 
-function onMouseMove(event) {
-  // 마우스 움직임
-  touchInput = false;
-  movePointer(event.clientX, event.clientY); // 마우스 위치값 받기
-}
+// function onMouseMove(event) {
+//   // 마우스 움직임
+//   touchInput = false;
+//   movePointer(event.clientX, event.clientY); // 마우스 위치값 받기
+// }
 
-function onTouchMove(event) {
-  // 모바일 터치
-  touchInput = true;
-  movePointer(event.touches[0].clientX, event.touches[0].clientY, true);
-  event.preventDefault();
-}
+// function onTouchMove(event) {
+//   // 모바일 터치
+//   touchInput = true;
+//   movePointer(event.touches[0].clientX, event.touches[0].clientY, true);
+//   event.preventDefault();
+// }
 
-function onMouseLeave() {
-  // 마우스위치값 초기화
-  pointerX = null;
-  pointerY = null;
-}
+// function onMouseLeave() {
+//   // 마우스위치값 초기화
+//   pointerX = null;
+//   pointerY = null;
+// }
