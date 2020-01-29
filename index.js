@@ -173,9 +173,15 @@ window.onload = function() {
   ie_fixed();
 
   function layerMove(event) {
-    cloud1[0].style.left = event.clientX * -0.015 - 330 + "px";
-    cloud2[0].style.right = event.clientX * -0.015 - 620 + "px";
-    moon[0].style.right = event.clientX * 0.015 - 650 + "px";
+    cloud1[0].style.transform = `translate3d(${event.clientX *
+      0.015 *
+      -1}px,0,0)`;
+    cloud2[0].style.transform = `translate3d(${event.clientX *
+      0.015 *
+      1}px,0,0)`;
+    moon[0].style.transform = `translate3d(${event.clientX *
+      0.015 *
+      -1}px,${event.clientY * 0.015 * -1}px,0)`;
   }
 
   function ie_fixed() {
@@ -190,11 +196,11 @@ window.onload = function() {
 
     // 달 스크롤
     if (scrolltop <= 420) {
-      moon[0].style.top = scrolltop * 1.85 - 280 + "px";
+      moon[0].style.top = Math.floor(scrolltop * 1.85 - 280) + "px";
     }
 
     // 헤더 타이틀 opacity
-    header_title[0].style.opacity = 1 - scrolltop * 0.004;
+    header_title[0].style.opacity = 1 - (scrolltop * 0.004).toFixed(1);
 
     // 스크롤에 따른 Nav bar화면 고정
     if (scrolltop >= section[0].offsetTop) {
