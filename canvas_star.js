@@ -2,7 +2,7 @@
 const canvas = document.querySelector("canvas");
 const context = canvas.getContext("2d");
 
-const STAR_COUNT = (window.innerWidth + window.innerHeight) / 10, // 별 개수
+const STAR_COUNT = (window.innerWidth + window.innerHeight) / 9, // 별 개수
   STAR_SIZE = 3,
   STAR_MIN_SCALE = 0.1, // 최소 스케일
   OVERFLOW_THRESHOLD = 50;
@@ -64,12 +64,14 @@ function step() {
 }
 
 function render() {
-  stars.forEach(star => {
+  stars.forEach((star, index) => {
     context.beginPath();
     context.lineCap = "round";
     context.lineWidth = STAR_SIZE * star.z * scale;
     context.strokeStyle =
-      "rgba(255,255,255," + (0.3 + 0.7 * Math.random()) + ")";
+      index % 9 === 0
+        ? "rgba(255,255,255)"
+        : "rgba(255,255,255," + (0.3 + 0.7 * Math.random()) + ")";
     // 별 반짝임 opacity
     context.lineTo(star.x, star.y);
     context.stroke();

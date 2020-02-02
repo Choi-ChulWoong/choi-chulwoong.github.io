@@ -1,45 +1,46 @@
-let readmore_on = false;
-let skills_show = false;
-let modal_on = false;
-let modal_youtube_on = false;
-let nav_mobile_on = false;
-const modal = document.getElementsByClassName("modal");
-const header = document.getElementsByClassName("header");
-const moon = document.getElementsByClassName("header_moon");
-const header_title = document.getElementsByClassName("header_title");
-const cloud1 = document.getElementsByClassName("header_cloud");
-const cloud2 = document.getElementsByClassName("header_cloud2");
-const nav = document.getElementsByClassName("nav");
-const nav_menu = document.getElementsByClassName("nav_menu");
-const nav_container = document.getElementsByClassName("nav_container");
-const section = document.getElementsByClassName("section");
-const myinfo = document.getElementsByClassName("article_myinfo");
-const myinfo_introduce = document.getElementsByClassName("myinfo_introduce");
-const myinfo_introduce2 = document.getElementsByClassName("myinfo_introduce2");
-const myinfo_introduce2_img = document.getElementsByClassName(
+var readmore_on = false;
+var skills_show = false;
+var modal_on = false;
+var modal_youtube_on = false;
+var nav_mobile_on = false;
+
+var modal = document.getElementsByClassName("modal");
+var header = document.getElementsByClassName("header");
+var moon = document.getElementsByClassName("header_moon");
+var header_title = document.getElementsByClassName("header_title");
+var cloud1 = document.getElementsByClassName("header_cloud");
+var cloud2 = document.getElementsByClassName("header_cloud2");
+var nav = document.getElementsByClassName("nav");
+var nav_menu = document.getElementsByClassName("nav_menu");
+var nav_container = document.getElementsByClassName("nav_container");
+var section = document.getElementsByClassName("section");
+var myinfo = document.getElementsByClassName("article_myinfo");
+var myinfo_introduce = document.getElementsByClassName("myinfo_introduce");
+var myinfo_introduce2 = document.getElementsByClassName("myinfo_introduce2");
+var myinfo_introduce2_img = document.getElementsByClassName(
   "myinfo_introduce2_img"
 );
-const skills_container = document.getElementsByClassName("skills_container");
-const skills_box = document.getElementsByClassName("skills_skillbox");
-const skills_title = document.getElementsByClassName("skills_title");
-const skills_text = document.getElementsByClassName("skills_text");
-const skills_img = document.getElementsByClassName("skills_img");
-const skills_readmore = document.getElementsByClassName("skills_readmore");
-const project_container = document.getElementsByClassName("project_container");
-const project_img1 = document.getElementsByClassName("project_img1");
-const project_intro1 = document.getElementsByClassName("project_intro1");
-const project_img2 = document.getElementsByClassName("project_img2");
-const project_intro2 = document.getElementsByClassName("project_intro2");
-const project_img3 = document.getElementsByClassName("project_img3");
-const project_intro3 = document.getElementsByClassName("project_intro3");
-const footer = document.getElementsByClassName("footer");
-const fa_sms = document.getElementsByClassName("fa-sms");
-const fa_github = document.getElementsByClassName("fa-github");
-const fa_instagram = document.getElementsByClassName("fa-instagram");
+var skills_container = document.getElementsByClassName("skills_container");
+var skills_box = document.getElementsByClassName("skills_skillbox");
+var skills_title = document.getElementsByClassName("skills_title");
+var skills_text = document.getElementsByClassName("skills_text");
+var skills_img = document.getElementsByClassName("skills_img");
+var skills_readmore = document.getElementsByClassName("skills_readmore");
+var project_container = document.getElementsByClassName("project_container");
+var project_img1 = document.getElementsByClassName("project_img1");
+var project_intro1 = document.getElementsByClassName("project_intro1");
+var project_img2 = document.getElementsByClassName("project_img2");
+var project_intro2 = document.getElementsByClassName("project_intro2");
+var project_img3 = document.getElementsByClassName("project_img3");
+var project_intro3 = document.getElementsByClassName("project_intro3");
+var footer = document.getElementsByClassName("footer");
+var fa_sms = document.getElementsByClassName("fa-sms");
+var fa_github = document.getElementsByClassName("fa-github");
+var fa_instagram = document.getElementsByClassName("fa-instagram");
 
 function readmore_hide() {
   // Skills 더보기 텍스트교체 event
-  const readmore = document.getElementsByClassName("skills_readmore");
+  var readmore = document.getElementsByClassName("skills_readmore");
   if (readmore_on == false) {
     readmore[0].innerHTML =
       "스킬 접기 <span class='skills_readmore_plus'>↑</span>";
@@ -84,8 +85,8 @@ function skillsshow(e) {
 
 function nav_scroll(e) {
   // Nav_menu 스크롤 이동
-  const scroll_target = document.getElementsByClassName(e);
-  const scroll_tartget_offset = scroll_target[0].offsetTop;
+  var scroll_target = document.getElementsByClassName(e);
+  var scroll_tartget_offset = scroll_target[0].offsetTop;
   window.scroll({ top: scroll_tartget_offset, left: 0, behavior: "smooth" });
 
   // for mobile
@@ -115,11 +116,11 @@ function nav_mobile() {
 }
 
 /* Youtube Api*/
-const tag = document.createElement("script");
+var tag = document.createElement("script");
 tag.src = "https://www.youtube.com/iframe_api";
-const firstScriptTag = document.getElementsByTagName("script")[0];
+var firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-let player;
+var player;
 /* Youtube Api end*/
 
 function youtube_on(e) {
@@ -164,39 +165,40 @@ function page_on(e) {
   window.open(e);
 }
 window.onload = function() {
-  let anicheck = 0;
+  var anicheck = 0;
+  var ie_check = navigator.userAgent.match(/Trident\/(\d)/);
 
   window.scrollTo(0, 1); // adressbar 숨기기
   scroll_animation(); // 새로고침시 애니메이션 1회 호출
   window.addEventListener("scroll", scroll_animation);
-  header[0].addEventListener("mousemove", layerMove);
-  ie_fixed();
+  if (ie_check == null) {
+    header[0].addEventListener("mousemove", layerMove);
+  } else {
+  }
 
   function layerMove(event) {
-    cloud1[0].style.transform = `translate3d(${event.clientX *
-      0.015 *
-      -1}px,0,0)`;
-    cloud2[0].style.transform = `translate3d(${event.clientX *
-      0.015 *
-      1}px,0,0)`;
-    moon[0].style.transform = `translate3d(${event.clientX *
-      0.005 *
-      -1}px,${event.clientY * 0.01 * -1}px,0)`;
+    cloud1[0].style.transform =
+      "translate3d(" + event.clientX * 0.015 * -1 + "px,0,0)";
+    cloud2[0].style.transform =
+      "translate3d(" + event.clientX * 0.015 * 1 + "px,0,0)";
+    moon[0].style.transform =
+      "translate3d(" +
+      event.clientX * 0.005 * -1 +
+      "px," +
+      event.clientY * 0.01 * -1 +
+      "px,0)";
   }
 
-  function ie_fixed() {
-    if (navigator.userAgent.match(/Trident\/7\./)) {
-      header[0].style.backgroundAttachment = "scroll";
-    }
-  }
   function scroll_animation() {
     // 스크롤 이벤트리스너
-    const scrolltop = document.documentElement.scrollTop;
-    const client_height = document.documentElement.clientHeight;
+    var scrolltop = document.documentElement.scrollTop;
+    var client_height = document.documentElement.clientHeight;
 
     // 달 스크롤
-    if (scrolltop <= 420) {
+    if (ie_check == null && scrolltop <= 420) {
       moon[0].style.top = Math.floor(scrolltop * 1.85 - 280) + "px";
+    } else if (ie_check != null) {
+      moon[0].style.top = "400px";
     }
 
     // 헤더 타이틀 opacity
