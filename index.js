@@ -202,7 +202,9 @@ window.onload = function() {
     }
 
     // 헤더 타이틀 opacity
-    header_title[0].style.opacity = 1 - (scrolltop * 0.004).toFixed(1);
+    if (scrolltop < section[0].offsetTop / 2) {
+      header_title[0].style.opacity = 1 - (scrolltop * 0.004).toFixed(1);
+    }
 
     // 스크롤에 따른 Nav bar화면 고정
     if (scrolltop >= section[0].offsetTop) {
