@@ -137,7 +137,6 @@ canvas {
   overflow: hidden;
 }
 .header_cloud2 {
-  position: absolute;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
