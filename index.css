@@ -158,7 +158,7 @@ canvas {
   position: relative;
   width: 45%;
   min-width: 400px;
-  opacity: 0.15;
+  opacity: 0.2;
   left: -18%;
 }
 .header_cloud2 img {
@@ -181,9 +181,14 @@ canvas {
   height: 75%;
 }
 .header_title {
+  margin-top: 20px;
   text-align: center;
   font-size: 1.8em;
   font-weight: 600;
+}
+.header_title p {
+  margin-top: 9px;
+  font-size: 0.9em;
 }
 
 /* Nav =================================================== */
