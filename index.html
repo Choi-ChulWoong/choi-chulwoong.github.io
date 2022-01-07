@@ -1,448 +1,371 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="author" content="IANCHOI" />
-    <meta name="description" content="최철웅의 포트폴리오 입니다." />
-    <title>최철웅 포트폴리오</title>
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="responsive.css" />
-    <link rel="stylesheet" href="animation.css" />
-    <link rel="shortcut icon" href="./favicon.ico" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,600|Quicksand:300,400,600|Open+Sans:300,400,600|&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://kit.fontawesome.com/d7381dedeb.js"></script>
-  </head>
-  <body>
-    <header class="header">
-      <canvas id="star"></canvas>
-      <div class="header-layer header_overlay"></div>
-      <div class="header-layer header_moon"><img src="./src/moon.png" /></div>
-      <div class="header-layer header_cloud">
-        <img src="./src/cloud2.png" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="author" content="IANCHOI" />
+  <meta name="description" content="최철웅의 포트폴리오 입니다." />
+  <title>최철웅 포트폴리오</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="responsive.css" />
+  <link rel="stylesheet" href="animation.css" />
+  <link rel="shortcut icon" href="./favicon.ico" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,600|Quicksand:300,400,600|Open+Sans:300,400,600|&display=swap"
+    rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/d7381dedeb.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <canvas id="star"></canvas>
+    <div class="header-layer header_overlay"></div>
+    <div class="header-layer header_moon"><img src="./src/moon.png" /></div>
+    <div class="header-layer header_cloud">
+      <img src="./src/cloud2.png" />
+    </div>
+    <div class="header-layer header_cloud2">
+      <img src="./src/cloud2.png" />
+    </div>
+    <div class="header-layer header_building">
+      <img src="./src/building.png" />
+    </div>
+
+    <div class="header_container">
+      <div class="header_title">
+        Ian Choi's Portfolio<br>2019
       </div>
-      <div class="header-layer header_cloud2">
-        <img src="./src/cloud2.png" />
+    </div>
+  </header>
+  <section class="section section_myinfo">
+    <article class="article_myinfo">
+      <nav class="nav">
+        <div class="nav_button" onclick="nav_mobile()">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav_container">
+          <div class="nav_menu" onclick="nav_scroll('header')">HOME</div>
+          <div class="nav_menu" onclick="nav_scroll('section_myinfo')">
+            ABOUT
+          </div>
+          <div class="nav_menu" onclick="nav_scroll('section_skills')">
+            SKILLS
+          </div>
+          <div class="nav_menu" onclick="nav_scroll('section_project')">
+            PROJECTS
+          </div>
+          <div class="nav_menu" onclick="nav_scroll('footer')">CONTACT</div>
+        </div>
+      </nav>
+      <div class="article_title_wrap">
+        <span class="article_title">ABOUT</span>
       </div>
-      <div class="header-layer header_building">
-        <img src="./src/building.png" />
+      <div class="myinfo_container">
+        <div class="myinfo_introduce">
+          <div class="myinfo_introduce_title">즐겁게 일하는 개발자</div>
+          <div class="myinfo_introduce_text">
+            <span class="highlight">나는 어떤 개발자가 되어야 할까?</span>
+            개발 공부를 하면서 고민해왔습니다. 근성있는 개발자, 자기개발 하는
+            개발자 등 여러 모습을 상상했지만 결국 이 일을 즐겨야 멀리갈 수
+            있겠다는 생각을 했습니다. 언제나 아메리카노 한 잔에 웃을 수 있는
+            개발자가 되고 싶습니다.
+          </div>
+          <div class="myinfo_introduce_text">
+            저는 18년 10월
+            <span class="highlight">'자바기반 웹 개발자'</span> 국비지원
+            교육을 통해 개발을 시작하였습니다. 현재는 Javascript의 매력에 빠져
+            더 좋은 <span class="highlight">프론트엔드 개발자</span>가 되기
+            위해 노력하고 있습니다. 아직은 부족하지만 UX/UI에 많은 관심을
+            가지고 있으며 최신 기술과 React를 좋아합니다.
+          </div>
+          <div class="myinfo_introduce_text">
+            앞으로 좋은 모습 보여드리겠습니다. 방문하고, 읽어주셔서
+            감사합니다.
+          </div>
+        </div>
+        <div class="myinfo_introduce2">
+          <div class="myinfo_introduce2_book">
+            <div class="myinfo_introduce2_title">Im Reading</div>
+            <div>
+              <img class="myinfo_introduce2_img" src="./src/myinfo_img/RN.png" alt="ui-ux" />
+            </div>
+          </div>
+          <div class="myinfo_introduce2_like">
+            <div class="myinfo_introduce2_title">Recent Like</div>
+            <div>
+              <img class="myinfo_introduce2_img" src="./src/myinfo_img/mango.png" alt="ui-ux" />
+            </div>
+          </div>
+          <div class="myinfo_introduce2_interest">
+            <div class="myinfo_introduce2_title">Interest In Recently</div>
+            <div>
+              <img class="myinfo_introduce2_img" src="./src/myinfo_img/ui-ux_design.png" alt="ui-ux" />
+              <img class="myinfo_introduce2_img" src="./src/myinfo_img/fp.png" alt="fp" />
+              <img class="myinfo_introduce2_img" src="./src/myinfo_img/three.png" alt="threejs" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <section class="section section_skills">
+    <article class="article_skills">
+      <div class="article_title_wrap">
+        <span class="article_title">SKILLS</span>
+      </div>
+      <input type="checkbox" id="readmore_checkbox" />
+      <div class="skills_container">
+        <div class="skills_skillbox" onclick="skillsshow('0')" id="skillbox1">
+          <span class="skills_title">JavaScript</span>
+          <div class="skills_img" style="background-image: url('./src/skill_logo/js.png')"></div>
+          <p class="skills_text">
+            ㆍES6 이상의 문법 사용<br />
+            ㆍ/정(=?규)식/g 사용<br />
+            ㆍPromise에 대한 이해<br />
+            ㆍprototype에 대한 이해<br />
+          </p>
+        </div>
+        <div class="skills_skillbox" onclick="skillsshow('1')" id="skillbox2">
+          <span class="skills_title">TypeScript</span>
+          <div class="skills_img" style="background-image: url('./src/skill_logo/typescript.png')"></div>
+          <p class="skills_text">
+            ㆍ객체, 리턴 Type 다루기<br />
+            ㆍ상속과 인터페이스 사용<br />
+          </p>
+        </div>
+        <div class="skills_skillbox" onclick="skillsshow('2')" id="skillbox3">
+          <span class="skills_title">React</span>
+          <div class="skills_img" style="background-image: url('./src/skill_logo/react.png')"></div>
+          <p class="skills_text">
+            ㆍHooks 사용<br />
+            ㆍRedux 상태 관리<br />
+            ㆍRedux-Saga 비동기통신<br />
+            ㆍNext.js SSR 지식<br />
+          </p>
+        </div>
+        <div class="skills_skillbox" onclick="skillsshow('3')" id="skillbox4">
+          <span class="skills_title">Vue.js</span>
+          <div class="skills_img" style="background-image: url('./src/skill_logo/vue.png')"></div>
+          <p class="skills_text">
+            ㆍVuex 상태 관리<br />
+            ㆍVue 디렉티브 문법 사용<br />
+          </p>
+        </div>
+        <div class="skills_skillbox" onclick="skillsshow('4')" id="skillbox5">
+          <span class="skills_title">Node.js</span>
+          <div class="skills_img" style="background-image: url('./src/skill_logo/node.png')"></div>
+          <p class="skills_text">
+            ㆍexpress 기본지식<br />
+            ㆍRestful Api 작성<br />
+            ㆍSequelize 사용<br />
+          </p>
+        </div>
+        <div class="skills_skillbox" onclick="skillsshow('5')" id="skillbox6">
+          <span class="skills_title">HTML5</span>
+          <div class="skills_img" style="background-image: url('./src/skill_logo/html.png')"></div>
+          <p class="skills_text">
+            ㆍ웹표준 기반 태그<br />
+            ㆍ시멘틱에 대한 이해<br />
+            ㆍHTML Canvas 사용<br />
+          </p>
+        </div>
+        <div class="skills_skillbox" onclick="skillsshow('6')" id="skillbox7">
+          <span class="skills_title">CSS3</span>
+          <div class="skills_img" style="background-image: url('./src/skill_logo/css.png')"></div>
+          <p class="skills_text">
+            ㆍGrid, Flex 레이아웃<br />
+            ㆍMedia Query 작성 가능<br />
+            ㆍ애니메이션에 대한 이해<br />
+          </p>
+        </div>
+        <div class="skills_skillbox" onclick="skillsshow('7')" id="skillbox8">
+          <span class="skills_title">SASS</span>
+          <div class="skills_img" style="background-image: url('./src/skill_logo/sass.png')"></div>
+          <p class="skills_text">
+            ㆍSCSS Scope, Nesting<br />
+            ㆍ변수 선언과 연산, 상속<br />
+          </p>
+        </div>
+        <div class="skills_skillbox" onclick="skillsshow('8')" id="skillbox9">
+          <span class="skills_title">JAVA</span>
+          <div class="skills_img" style="background-image: url('./src/skill_logo/java.png')"></div>
+          <p class="skills_text">
+            ㆍ객체지향에 대한 이해<br />
+            ㆍ컬렉션 프레임워크 사용<br />
+            ㆍJSP 작성<br />
+          </p>
+        </div>
+        <div class="skills_skillbox" onclick="skillsshow('9')" id="skillbox10">
+          <span class="skills_title">jQuery</span>
+          <div class="skills_img" style="background-image: url('./src/skill_logo/jquery.png')"></div>
+          <p class="skills_text">
+            ㆍjquery 셀렉터 사용<br />
+            ㆍ이벤트 바인딩과 속성 작성<br />
+          </p>
+        </div>
+      </div>
+      <label for="readmore_checkbox" class="skills_readmore" onclick="readmore_hide()">
+        스킬 더보기
+      </label>
+    </article>
+  </section>
+  <section class="section section_project">
+    <article class="article_project">
+      <div class="article_title_wrap">
+        <span class="article_title">PROJECTS</span>
       </div>
 
-      <div class="header_container">
-        <div class="header_title">
-          Ian Choi's Portfolio
-        </div>
-      </div>
-    </header>
-    <section class="section section_myinfo">
-      <article class="article_myinfo">
-        <nav class="nav">
-          <div class="nav_button" onclick="nav_mobile()">
-            <i class="fas fa-bars"></i>
+      <div class="project_container">
+        <div class="project_img project_img1"></div>
+        <div class="project_intro project_intro1">
+          <div class="project_intro_title">
+            <span class="highlight">01</span>React SNS
           </div>
-          <div class="nav_container">
-            <div class="nav_menu" onclick="nav_scroll('header')">HOME</div>
-            <div class="nav_menu" onclick="nav_scroll('section_myinfo')">
-              ABOUT
-            </div>
-            <div class="nav_menu" onclick="nav_scroll('section_skills')">
-              SKILLS
-            </div>
-            <div class="nav_menu" onclick="nav_scroll('section_project')">
-              PROJECTS
-            </div>
-            <div class="nav_menu" onclick="nav_scroll('footer')">CONTACT</div>
-          </div>
-        </nav>
-        <div class="article_title_wrap">
-          <span class="article_title">ABOUT</span>
-        </div>
-        <div class="myinfo_container">
-          <div class="myinfo_introduce">
-            <div class="myinfo_introduce_title">즐겁게 일하는 개발자</div>
-            <div class="myinfo_introduce_text">
-              <span class="highlight">나는 어떤 개발자가 되어야 할까?</span>
-              개발 공부를 하면서 고민해왔습니다. 근성있는 개발자, 자기개발 하는
-              개발자 등 여러 모습을 상상했지만 결국 이 일을 즐겨야 멀리갈 수
-              있겠다는 생각을 했습니다. 언제나 아메리카노 한 잔에 웃을 수 있는
-              개발자가 되고 싶습니다.
-            </div>
-            <div class="myinfo_introduce_text">
-              저는 18년 10월
-              <span class="highlight">'자바기반 웹 개발자'</span> 국비지원
-              교육을 통해 개발을 시작하였습니다. 현재는 Javascript의 매력에 빠져
-              더 좋은 <span class="highlight">프론트엔드 개발자</span>가 되기
-              위해 노력하고 있습니다. 아직은 부족하지만 UX/UI에 많은 관심을
-              가지고 있으며 최신 기술과 React를 좋아합니다.
-            </div>
-            <div class="myinfo_introduce_text">
-              앞으로 좋은 모습 보여드리겠습니다. 방문하고, 읽어주셔서
-              감사합니다.
-            </div>
-          </div>
-          <div class="myinfo_introduce2">
-            <div class="myinfo_introduce2_book">
-              <div class="myinfo_introduce2_title">Im Reading</div>
-              <div>
-                <img
-                  class="myinfo_introduce2_img"
-                  src="./src/myinfo_img/RN.png"
-                  alt="ui-ux"
-                />
+          <div class="project_intro_text">
+            <p>
+              심플한 SNS 사이트입니다.<br />
+              이미지 업로드를 비롯한 CRUD가 가능한 SPA입니다.<br />
+            </p>
+            <p>
+              <span>참여 인원</span>1 명<br />
+              <span>개발 기간</span>19.10 ~ 19.12<br />
+            </p>
+            <p>
+              <span class="highlight">Client</span>React, Redux, Next.js<br />
+              <span class="highlight">Server</span>Node.js, Sequelize, MySql,
+              AWS<br />
+            </p>
+            <div class="project_intro_button_box">
+              <div class="project_intro_button" onclick="youtube_on('om3f3AuP0Tc')">
+                YouTube 보기
+              </div>
+              <div class="project_intro_button" onclick="github_on('React-sns')">
+                Github 보기
               </div>
             </div>
-            <div class="myinfo_introduce2_like">
-              <div class="myinfo_introduce2_title">Recent Like</div>
-              <div>
-                <img
-                  class="myinfo_introduce2_img"
-                  src="./src/myinfo_img/mango.png"
-                  alt="ui-ux"
-                />
-              </div>
-            </div>
-            <div class="myinfo_introduce2_interest">
-              <div class="myinfo_introduce2_title">Interest In Recently</div>
-              <div>
-                <img
-                  class="myinfo_introduce2_img"
-                  src="./src/myinfo_img/ui-ux_design.png"
-                  alt="ui-ux"
-                />
-                <img
-                  class="myinfo_introduce2_img"
-                  src="./src/myinfo_img/fp.png"
-                  alt="fp"
-                />
-                <img
-                  class="myinfo_introduce2_img"
-                  src="./src/myinfo_img/three.png"
-                  alt="threejs"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </article>
-    </section>
-    <section class="section section_skills">
-      <article class="article_skills">
-        <div class="article_title_wrap">
-          <span class="article_title">SKILLS</span>
-        </div>
-        <input type="checkbox" id="readmore_checkbox" />
-        <div class="skills_container">
-          <div class="skills_skillbox" onclick="skillsshow('0')" id="skillbox1">
-            <span class="skills_title">JavaScript</span>
-            <div
-              class="skills_img"
-              style="background-image: url('./src/skill_logo/js.png')"
-            ></div>
-            <p class="skills_text">
-              ㆍES6 이상의 문법 사용<br />
-              ㆍ/정(=?규)식/g 사용<br />
-              ㆍPromise에 대한 이해<br />
-              ㆍprototype에 대한 이해<br />
-            </p>
-          </div>
-          <div class="skills_skillbox" onclick="skillsshow('1')" id="skillbox2">
-            <span class="skills_title">TypeScript</span>
-            <div
-              class="skills_img"
-              style="background-image: url('./src/skill_logo/typescript.png')"
-            ></div>
-            <p class="skills_text">
-              ㆍ객체, 리턴 Type 다루기<br />
-              ㆍ상속과 인터페이스 사용<br />
-            </p>
-          </div>
-          <div class="skills_skillbox" onclick="skillsshow('2')" id="skillbox3">
-            <span class="skills_title">React</span>
-            <div
-              class="skills_img"
-              style="background-image: url('./src/skill_logo/react.png')"
-            ></div>
-            <p class="skills_text">
-              ㆍHooks 사용<br />
-              ㆍRedux 상태 관리<br />
-              ㆍRedux-Saga 비동기통신<br />
-              ㆍNext.js SSR 지식<br />
-            </p>
-          </div>
-          <div class="skills_skillbox" onclick="skillsshow('3')" id="skillbox4">
-            <span class="skills_title">Vue.js</span>
-            <div
-              class="skills_img"
-              style="background-image: url('./src/skill_logo/vue.png')"
-            ></div>
-            <p class="skills_text">
-              ㆍVuex 상태 관리<br />
-              ㆍVue 디렉티브 문법 사용<br />
-            </p>
-          </div>
-          <div class="skills_skillbox" onclick="skillsshow('4')" id="skillbox5">
-            <span class="skills_title">Node.js</span>
-            <div
-              class="skills_img"
-              style="background-image: url('./src/skill_logo/node.png')"
-            ></div>
-            <p class="skills_text">
-              ㆍexpress 기본지식<br />
-              ㆍRestful Api 작성<br />
-              ㆍSequelize 사용<br />
-            </p>
-          </div>
-          <div class="skills_skillbox" onclick="skillsshow('5')" id="skillbox6">
-            <span class="skills_title">HTML5</span>
-            <div
-              class="skills_img"
-              style="background-image: url('./src/skill_logo/html.png')"
-            ></div>
-            <p class="skills_text">
-              ㆍ웹표준 기반 태그<br />
-              ㆍ시멘틱에 대한 이해<br />
-              ㆍHTML Canvas 사용<br />
-            </p>
-          </div>
-          <div class="skills_skillbox" onclick="skillsshow('6')" id="skillbox7">
-            <span class="skills_title">CSS3</span>
-            <div
-              class="skills_img"
-              style="background-image: url('./src/skill_logo/css.png')"
-            ></div>
-            <p class="skills_text">
-              ㆍGrid, Flex 레이아웃<br />
-              ㆍMedia Query 작성 가능<br />
-              ㆍ애니메이션에 대한 이해<br />
-            </p>
-          </div>
-          <div class="skills_skillbox" onclick="skillsshow('7')" id="skillbox8">
-            <span class="skills_title">SASS</span>
-            <div
-              class="skills_img"
-              style="background-image: url('./src/skill_logo/sass.png')"
-            ></div>
-            <p class="skills_text">
-              ㆍSCSS Scope, Nesting<br />
-              ㆍ변수 선언과 연산, 상속<br />
-            </p>
-          </div>
-          <div class="skills_skillbox" onclick="skillsshow('8')" id="skillbox9">
-            <span class="skills_title">JAVA</span>
-            <div
-              class="skills_img"
-              style="background-image: url('./src/skill_logo/java.png')"
-            ></div>
-            <p class="skills_text">
-              ㆍ객체지향에 대한 이해<br />
-              ㆍ컬렉션 프레임워크 사용<br />
-              ㆍJSP 작성<br />
-            </p>
-          </div>
-          <div
-            class="skills_skillbox"
-            onclick="skillsshow('9')"
-            id="skillbox10"
-          >
-            <span class="skills_title">jQuery</span>
-            <div
-              class="skills_img"
-              style="background-image: url('./src/skill_logo/jquery.png')"
-            ></div>
-            <p class="skills_text">
-              ㆍjquery 셀렉터 사용<br />
-              ㆍ이벤트 바인딩과 속성 작성<br />
-            </p>
-          </div>
-        </div>
-        <label
-          for="readmore_checkbox"
-          class="skills_readmore"
-          onclick="readmore_hide()"
-        >
-          스킬 더보기
-        </label>
-      </article>
-    </section>
-    <section class="section section_project">
-      <article class="article_project">
-        <div class="article_title_wrap">
-          <span class="article_title">PROJECTS</span>
-        </div>
-
-        <div class="project_container">
-          <div class="project_img project_img1"></div>
-          <div class="project_intro project_intro1">
-            <div class="project_intro_title">
-              <span class="highlight">01</span>React SNS
-            </div>
-            <div class="project_intro_text">
-              <p>
-                심플한 SNS 사이트입니다.<br />
-                이미지 업로드를 비롯한 CRUD가 가능한 SPA입니다.<br />
-              </p>
-              <p>
-                <span>참여 인원</span>1 명<br />
-                <span>개발 기간</span>19.10 ~ 19.12<br />
-              </p>
-              <p>
-                <span class="highlight">Client</span>React, Redux, Next.js<br />
-                <span class="highlight">Server</span>Node.js, Sequelize, MySql,
-                AWS<br />
-              </p>
-              <div class="project_intro_button_box">
-                <div
-                  class="project_intro_button"
-                  onclick="youtube_on('om3f3AuP0Tc')"
-                >
-                  YouTube 보기
-                </div>
-                <div
-                  class="project_intro_button"
-                  onclick="github_on('React-sns')"
-                >
-                  Github 보기
-                </div>
-              </div>
-              <!-- <div
+            <!-- <div
                 class="project_intro_button2"
                 onclick="page_on('http://reactsns.net/')"
               >
                 사이트로 이동
               </div> -->
-            </div>
           </div>
         </div>
-        <div class="project_container project_container2">
-          <div class="project_img project_img2"></div>
-          <div class="project_intro project_intro2">
-            <div class="project_intro_title">
-              <span class="highlight">02</span>Project OWL
-            </div>
-            <div class="project_intro_text">
-              <p>
-                개발자를 위한 검색사이트입니다.<br />
-                질문답변, 검색기능, 자료검색 등이 가능한 SPA 입니다.<br />
-              </p>
-              <p>
-                <span>참여 인원</span>4 명<br />
-                <span>개발 기간</span>19.02 ~ 19.04<br />
-              </p>
-              <p>
-                <span class="highlight">Client</span>Vue.js, Vuex, Sass<br />
-                <span class="highlight">Server</span>Java, MariaDB, Node.js, AWS
-                <br />
-              </p>
-              <div class="project_intro_button_box">
-                <div
-                  class="project_intro_button"
-                  onclick="youtube_on('__j3qJLlCM4')"
-                >
-                  YouTube 보기
-                </div>
-                <div
-                  class="project_intro_button"
-                  onclick="github_on('owl-front-server')"
-                >
-                  Github 보기
-                </div>
+      </div>
+      <div class="project_container project_container2">
+        <div class="project_img project_img2"></div>
+        <div class="project_intro project_intro2">
+          <div class="project_intro_title">
+            <span class="highlight">02</span>Project OWL
+          </div>
+          <div class="project_intro_text">
+            <p>
+              개발자를 위한 검색사이트입니다.<br />
+              질문답변, 검색기능, 자료검색 등이 가능한 SPA 입니다.<br />
+            </p>
+            <p>
+              <span>참여 인원</span>4 명<br />
+              <span>개발 기간</span>19.02 ~ 19.04<br />
+            </p>
+            <p>
+              <span class="highlight">Client</span>Vue.js, Vuex, Sass<br />
+              <span class="highlight">Server</span>Java, MariaDB, Node.js, AWS
+              <br />
+            </p>
+            <div class="project_intro_button_box">
+              <div class="project_intro_button" onclick="youtube_on('__j3qJLlCM4')">
+                YouTube 보기
+              </div>
+              <div class="project_intro_button" onclick="github_on('owl-front-server')">
+                Github 보기
               </div>
             </div>
           </div>
         </div>
-        <div class="project_container project_container3">
-          <div class="project_img project_img3"></div>
-          <div class="project_intro project_intro3">
-            <div class="project_intro_title">
-              <span class="highlight">03</span>RunRun!
-            </div>
-            <div class="project_intro_text">
-              <p>
-                미니게임 형식의 Toy Project입니다.<br />
-                모바일에 최적화 되어있는 웹페이지입니다.<br />
-                학원 동기들과 점심내기를 하기위해 만들었습니다.<br />
-              </p>
-              <p>
-                <span>참여 인원</span>1 명<br />
-                <span>개발 기간</span>19.04 ~ 19.05<br />
-              </p>
-              <p>
-                <span class="highlight">Client</span>React, Sass<br />
-                <span class="highlight">Server</span>heroku<br />
-              </p>
-              <div class="project_intro_button_box">
-                <div
-                  class="project_intro_button"
-                  onclick="youtube_on('idJDuzoHI68')"
-                >
-                  YouTube 보기
-                </div>
-                <div
-                  class="project_intro_button"
-                  onclick="github_on('RunRun-')"
-                >
-                  Github 보기
-                </div>
+      </div>
+      <div class="project_container project_container3">
+        <div class="project_img project_img3"></div>
+        <div class="project_intro project_intro3">
+          <div class="project_intro_title">
+            <span class="highlight">03</span>RunRun!
+          </div>
+          <div class="project_intro_text">
+            <p>
+              미니게임 형식의 Toy Project입니다.<br />
+              모바일에 최적화 되어있는 웹페이지입니다.<br />
+              학원 동기들과 점심내기를 하기위해 만들었습니다.<br />
+            </p>
+            <p>
+              <span>참여 인원</span>1 명<br />
+              <span>개발 기간</span>19.04 ~ 19.05<br />
+            </p>
+            <p>
+              <span class="highlight">Client</span>React, Sass<br />
+              <span class="highlight">Server</span>heroku<br />
+            </p>
+            <div class="project_intro_button_box">
+              <div class="project_intro_button" onclick="youtube_on('idJDuzoHI68')">
+                YouTube 보기
               </div>
-              <div
-                class="project_intro_button2"
-                onclick="page_on('https://animalrun.netlify.com/')"
-              >
-                사이트로 이동
+              <div class="project_intro_button" onclick="github_on('RunRun-')">
+                Github 보기
               </div>
             </div>
-          </div>
-        </div>
-      </article>
-    </section>
-    <footer class="footer">
-      <div class="footer_topbutton_container">
-        <div class="footer_topbutton" onclick="nav_scroll('header')">
-          <i class="fas fa-chevron-up"></i>
-        </div>
-      </div>
-      <div class="footer_contact_container">
-        <div class="footer_contact1">
-          <div>
-            <div class="footer_contact1_phone">
-              <i class="fas fa-phone-alt"></i>010.9506.7311
-            </div>
-            <div class="footer_contact1_email">
-              <i class="fas fa-envelope"></i>endnd28@gmail.com
+            <div class="project_intro_button2" onclick="page_on('https://animalrun.netlify.com/')">
+              사이트로 이동
             </div>
           </div>
         </div>
-        <div class="footer_contact2">
-          <div onclick="page_on('https://open.kakao.com/o/syU3Zavb')">
-            <i class="fas fa-sms"></i>
-          </div>
-          <div onclick="github_on('')"><i class="fab fa-github"></i></div>
-          <div onclick="page_on('https://www.instagram.com/ian_cwchoi/')">
-            <i class="fab fa-instagram"></i>
-          </div>
-        </div>
       </div>
-      <div class="footer_copyright">
-        IAN CHOI <span class="highlight">©2019</span>
+    </article>
+  </section>
+  <footer class="footer">
+    <div class="footer_topbutton_container">
+      <div class="footer_topbutton" onclick="nav_scroll('header')">
+        <i class="fas fa-chevron-up"></i>
       </div>
-    </footer>
-    <div class="modal" onclick="modal_off()">
-      <div class="modal_close"><i class="fas fa-times"></i></div>
-      <div class="modal_youtube" id="player"></div>
     </div>
-    <div id="preload">
-      <img src="/src/portfolio_img/portfolio1_1.png" />
-      <img src="/src/portfolio_img/portfolio2.gif" />
-      <img src="/src/portfolio_img/portfolio1_mobile.png" />
+    <div class="footer_contact_container">
+      <div class="footer_contact1">
+        <div>
+          <div class="footer_contact1_phone">
+            <i class="fas fa-phone-alt"></i>010.9506.7311
+          </div>
+          <div class="footer_contact1_email">
+            <i class="fas fa-envelope"></i>endnd28@gmail.com
+          </div>
+        </div>
+      </div>
+      <div class="footer_contact2">
+        <div onclick="page_on('https://open.kakao.com/o/syU3Zavb')">
+          <i class="fas fa-sms"></i>
+        </div>
+        <div onclick="github_on('')"><i class="fab fa-github"></i></div>
+        <div onclick="page_on('https://www.instagram.com/ian_cwchoi/')">
+          <i class="fab fa-instagram"></i>
+        </div>
+      </div>
     </div>
+    <div class="footer_copyright">
+      IAN CHOI <span class="highlight">©2019</span>
+    </div>
+  </footer>
+  <div class="modal" onclick="modal_off()">
+    <div class="modal_close"><i class="fas fa-times"></i></div>
+    <div class="modal_youtube" id="player"></div>
+  </div>
+  <div id="preload">
+    <img src="/src/portfolio_img/portfolio1_1.png" />
+    <img src="/src/portfolio_img/portfolio2.gif" />
+    <img src="/src/portfolio_img/portfolio1_mobile.png" />
+  </div>
 
-    <script src="flexibility.js"></script>
-    <script src="index.js"></script>
-    <script src="canvas_star.js"></script>
-  </body>
+  <script src="flexibility.js"></script>
+  <script src="index.js"></script>
+  <script src="canvas_star.js"></script>
+</body>
+
 </html>
