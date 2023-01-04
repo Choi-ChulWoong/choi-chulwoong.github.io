@@ -164,7 +164,7 @@ function github_on(e) {
 function page_on(e) {
   window.open(e);
 }
-window.onload = function() {
+window.onload = function () {
   var anicheck = 0;
   var ie_check = navigator.userAgent.match(/Trident\/(\d)/);
 
@@ -269,7 +269,7 @@ window.onload = function() {
       if (
         anicheck == 2 &&
         scrolltop + client_height / 2 >=
-          section[2].offsetTop + project_container[0].offsetTop
+        section[2].offsetTop + project_container[0].offsetTop
       ) {
         project_img1[0].style.animation = "slide-right 0.7s ease-out both";
         project_intro1[0].style.animation = "slide-left 0.7s ease-out both";
@@ -280,7 +280,7 @@ window.onload = function() {
       if (
         anicheck == 3 &&
         scrolltop + client_height / 2 >=
-          section[2].offsetTop + project_container[1].offsetTop
+        section[2].offsetTop + project_container[1].offsetTop
       ) {
         project_img2[0].style.animation = "slide-left 0.7s ease-out both";
         project_intro2[0].style.animation = "slide-right 0.7s ease-out both";
@@ -291,7 +291,7 @@ window.onload = function() {
       if (
         anicheck == 4 &&
         scrolltop + client_height / 2 >=
-          section[2].offsetTop + project_container[2].offsetTop
+        section[2].offsetTop + project_container[2].offsetTop
       ) {
         project_img3[0].style.animation = "slide-right 0.7s ease-out both";
         project_img3[0].style.opacity = "1";
@@ -302,7 +302,7 @@ window.onload = function() {
       if (
         anicheck == 5 &&
         scrolltop + client_height >=
-          footer[0].offsetTop + footer[0].offsetHeight / 1.4
+        footer[0].offsetTop + footer[0].offsetHeight / 1.4
       ) {
         fa_sms[0].style.opacity = "1";
         fa_github[0].style.opacity = "1";
