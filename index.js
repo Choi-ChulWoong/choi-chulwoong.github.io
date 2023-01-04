@@ -159,7 +159,7 @@ function modal_off() {
   player.destroy(); // 유튜브 객체 삭제(페이지 렉 방지)
 }
 function github_on(e) {
-  window.open("https://github.com/ristretto-code/" + e);
+  window.open("https://github.com/choi-chulwoong/" + e);
 }
 function page_on(e) {
   window.open(e);
